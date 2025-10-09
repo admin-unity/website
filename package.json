@@ -1,0 +1,50 @@
+{
+  "name": "unityforlife-website",
+  "version": "0.1.0",
+  "description": "Safe, accessible housing for veterans, elderly, and disabled individuals. UnityForLife builds hope one home at a time.",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbo",
+    "build": "next build",
+    "start": "next start",
+    "test": "jest --watch",
+    "e2e": "playwright test",
+    "lint": "eslint . --ext .ts,.tsx --fix",
+    "lint:colors": "eslint . --rule 'no-restricted-syntax: [error, CallExpression[callee.name=className][arguments.0.value=/[A-Z]/]]'",
+    "pre-commit": "pnpm lint && pnpm build",
+    "tokens:sync": "echo 'Tokens automatically synced via tailwind.config.ts'"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.2.0",
+    "clsx": "^2.1.0",
+    "framer-motion": "^10.18.0",
+    "next": "^15.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "resend": "^6.0.1",
+    "tailwind-merge": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^15.3.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-tailwindcss": "^3.15.0",
+    "postcss": "^8.4.47",
+    "prettier": "^3.2.0",
+    "prettier-plugin-tailwindcss": "^0.5.0",
+    "sharp": "^0.32.6",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "packageManager": "pnpm@9.0.0"
+}
